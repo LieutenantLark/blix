@@ -172,17 +172,17 @@ class Particle {
 }
 
 function loop() {
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	explosions.update();
-	particles.draw();
-	requestAnimationFrame(loop);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    explosions.update();
+    particles.draw();
+    requestAnimationFrame(loop);
 }
 
 window.addEventListener('resize', resize, false);
 
 canvas.addEventListener('mousedown', (e) => {
-	const explosion = explosions.create();
-	explosion.init(e.offsetX, e.offsetY);
+    const explosion = explosions.create();
+    explosion.init(e.offsetX, e.offsetY);
 }, false);
 
 function resize() {
