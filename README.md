@@ -1,5 +1,5 @@
 # Blix — [Demo](https://voormann.github.io/blix)
-Simple particle system built for Canvas 2D that's easy to use and customize. The main focus is performance with batch rendering, minimal color state changes with a predefined palette, object pooling with separate pools for explosions and particles to reduce garbage collection hits, efficient object sorting, and simplifying the particles' shape as they shrink.
+A particle system built for Canvas 2D that's simple to use and customize. The main focus is performance with batch rendering, minimal color state changes with a predefined palette, object pooling with separate pools for explosions and particles to reduce garbage collection hits, efficient object sorting, and simplifying the particles' shape as they shrink.
 
 
 ### Basic setup
@@ -20,12 +20,12 @@ explosion.init(/* X position */, /* Y position */);
 The basic settings can be changed in the explosion object:
 ```js
 const explosion = {
-    multiplier: 8,
+    colors: ['#6434E9', '#2C7CE5', '#49CC5C', '#F8C421', '#FB6640', '#F82553'],
     variations: 6,
-    colors: ['#6434E9', '#2C7CE5', '#49CC5C', '#F8C421', '#FB6640', '#F82553']
+    multiplier: 8
 };
 ```
-`variations` corresponds to how many color indices present in the `colors` array, while `multiplier` decides how many particles spawn per color index (e.g. 8 * 6 = 48).
+`variations` corresponds to how many color indices present in the `colors` array, while `multiplier` decides how many particles spawn per color index (e.g. 6 * 8 = 48 particles per explosion).
 
 How the particles behave can be changed in the Particle class' init function:
 ```js
